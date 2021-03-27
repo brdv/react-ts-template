@@ -23,6 +23,7 @@
   },
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
+    "comma-dangle": ["error", "never"],
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": ["error"],
     "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
@@ -60,6 +61,15 @@
           }
         ],
         "pathGroupsExcludedImportTypes": ["builtin"]
+      }
+    ],
+    "object-curly-newline": [
+      "error",
+      {
+        "ObjectExpression": "always",
+        "ObjectPattern": { "multiline": true },
+        "ImportDeclaration": "never",
+        "ExportDeclaration": { "multiline": true, "minProperties": 3 }
       }
     ]
   },
